@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Game.unity
+=======
+- path: Assets/younis.unity
+>>>>>>> 8e1bbf3eb5f8a9558f47195a8a965f3446b4b25c
   isLoaded: 1
   isActive: 1
