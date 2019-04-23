@@ -11,16 +11,15 @@ public class score : MonoBehaviour
     private int maxDifficultyLevel = 10;
     private int scoreToNexLevel = 10;
 
+    private bool isDead = false;
     public Text scoretext;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
+    public DeathMenu deathMenu;
     // Update is called once per frame
     void Update()
     {
+        if (isDead)
+            return;
 
         if (Score >= scoreToNexLevel)
         {
@@ -41,5 +40,11 @@ public class score : MonoBehaviour
         GetComponent<PlayerMotor>().SetSpeed(difficultyLevel);
 
         Debug.Log(difficultyLevel);
+    }
+
+    public void OnDeath()
+    {
+        isDead = true;
+        deathMenu.ToggleEndMenu(Score);
     }
 }
